@@ -1,8 +1,11 @@
-// https://docs.cypress.io/api/introduction/api.html
+describe('Adding document to firestore', () => {
+  it('Visits the app and sends a document add request', () => {
+    cy.visit('/');
 
-describe('My First Test', () => {
-  it('Visits the app root url', () => {
-    cy.visit('/')
-    cy.contains('h1', 'Welcome to Your Vue.js App')
+    cy.get("[data-test=add-doc-button]")
+      .click();
+
+    cy.get("[data-test=timer]")
+      .should("be.lessThan", 2.0);
   })
 })

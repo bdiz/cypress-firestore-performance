@@ -8,6 +8,8 @@
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "@firebase/app": "^0.3.3",
+    "@firebase/firestore": "^0.7.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
